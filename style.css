@@ -163,7 +163,7 @@ h1:hover{
     margin-bottom: 10px;
     height: fit-content;
     font-family: 'Roboto', sans-serif;
-    div{
+    .OuterDiv{
         background-color: #f67f7f;
         margin: auto;
         margin-top: 0px;
@@ -183,7 +183,7 @@ h1:hover{
                 rgba(255,255,255) 0%, rgba(255,255,255) 50%, rgb(221, 221, 221) 100%);
             margin: auto;
             width: 25svw;
-            min-height: 44dvh;
+            min-height: 42dvh;
             margin-bottom: 0px;
             overflow: hidden;
             border-radius: 10px;
@@ -237,13 +237,13 @@ h1:hover{
             }   
         }   
     }
-    div:hover{
+    .OuterDiv:hover{
         background-color: #f06969;
         margin-bottom: 0px;
         div{
             background-color: #e6e4e4;
             width: 26svw;
-            min-height: 45svh;
+            min-height: 43svh;
             background-image: radial-gradient(circle, 
                 rgba(255,255,255,1) 0%, rgb(241, 241, 241) 50%, rgb(189, 189, 189) 100%);
             .textDecoration{
@@ -253,6 +253,35 @@ h1:hover{
             }
         }
     }
+}
+.copyButton{
+    height: auto;
+    width: 10%;
+    aspect-ratio: 2/1;
+    margin: 0px 5px;
+    margin-left: 25%;
+       
+    cursor: pointer;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    vertical-align: middle;
+
+    background-color:#f67f7f;
+    border: 1px solid rgb(66, 66, 66);
+    border-bottom: none;
+    
+    img{
+        margin: auto;
+        vertical-align: middle;
+        aspect-ratio: 1/1;
+        user-select: none;
+    }
+}
+.copyButton:hover{
+    background-color: #f06969;
+    border: 1px solid rgb(66, 66, 66);
+    border-bottom: none;
 }
 .backgroundNumbers{
     position:absolute;

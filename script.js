@@ -216,6 +216,18 @@ async function onInput(){
 
     prevNum = number;
 }
+function CopyNumber(id){
+    NumberDivs.forEach((element) => {
+        if(element.divId == id && !element.main){
+            let text = element.getElement().querySelector("#value").innerHTML;
+
+            //zkopíruje text do schránky
+            navigator.clipboard.writeText(text);
+
+            alert("Číslo bylo zkopírováno do schránky");
+        }
+    });
+}   
 //vrátí strukturu divu, která je označena jako hlavní
 function getMainDiv(){
     let mainElement = null;
