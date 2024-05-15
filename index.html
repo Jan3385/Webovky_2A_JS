@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/png">
+    <title>Převodník</title>
+</head>
+<body>
+    <h1 class="full-text" id="animated">-- Převodník soustav --</h1>
+    <h1 class="short-text">Převodník soustav</h1>
+    <div class="upperDiv" id="mainDiv">
+        <form onsubmit="return false;"> <!-- return false; -> forma neresetuje stránku -->
+            <h3 id="name">Desítková soustava</h3>
+            <div>
+                <div>
+                    <button type="button" class="button" id="reset" onclick="resetNumbers()"><img src="X.svg"></button>
+                    <input type="text" id="input" placeholder="0" maxlength="16" oninput="onInput()" autocomplete="off">
+                    <button type="button" class="button" id="rng" onclick="inputRandomNumber(5)"><img src="reload.svg"></button>
+                </div>
+                <p id="length">Délka 1 znak(ů)</p>
+                <p id="bitLength">Velikost 1 bitů</p>
+            </div>
+        </form reload="off">
+    </div>
+    <div class="grid">
+        <div id="div1">
+            <div>
+                <h3 id="name">Binární soustava</h3>
+                <h2 id="value">0</h2>
+                <p id="equasion">2^n</p>
+                <p id="length">Délka 1 znak(ů)</p>
+                <p class="textDecoration">10010100101</p>
+            </div>
+        </div>
+        <div id="div2">
+            <div>
+                <h3 id="name">Oktálová soustava</h3>
+                <h2 id="value">0</h2>
+                <p id="equasion">8^n</p>
+                <p id="length">Délka 1 znak(ů)</p>
+                <p class="textDecoration">46152635261</p>
+            </div>
+        </div>
+        <div id="div3">
+            <div>
+                <h3 id="name">Hexadecimální soustava</h3>
+                <h2 id="value">0</h2>
+                <p id="equasion">16^n</p>
+                <p id="length">Délka 1 znak(ů)</p>
+                <p class="textDecoration">3FF4D12DF</p>
+            </div>
+        </div>
+    </div>
+    <div class="backgroundNumbers">
+        <p id="binaryBG">10010101</p>
+        <p id="hexadecimalBG">4D76FF</p>
+        <p id="decimalBG">746385</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
