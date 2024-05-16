@@ -255,11 +255,12 @@ h1:hover{
     }
 }
 .copyButton{
-    height: auto;
-    width: 10%;
-    aspect-ratio: 2/1;
+    height: 25px;
+    width: 8%;
+    max-width: 30px;
     margin: 0px 5px;
     margin-left: 25%;
+    padding-left: 6px;
        
     cursor: pointer;
     border-top-left-radius: 5px;
@@ -270,18 +271,35 @@ h1:hover{
     background-color:#f67f7f;
     border: 1px solid rgb(66, 66, 66);
     border-bottom: none;
-    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 
+        width 0.2s,
+        max-width 0.2s;
     img{
-        margin: auto;
+        margin-left: 0;
         vertical-align: middle;
         aspect-ratio: 1/1;
         user-select: none;
+        float: left;
+    }
+    p{
+        height: 70%;
+        overflow: hidden;
+        text-overflow: clip;
+        white-space: nowrap;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
     }
 }
 .copyButton:hover{
     background-color: #f06969;
     border: 1px solid rgb(66, 66, 66);
     border-bottom: none;
+    width: 70px;
+    max-width: 100px;
 }
 .backgroundNumbers{
     position:absolute;
