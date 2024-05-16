@@ -27,6 +27,14 @@ window.onload = function(){
     NumberDivs[3].getElement().addEventListener("mouseup", function(){elementClickHandler(3)}, false);
 
     setInterval(animateBackground, 100);
+    setInterval(rotát, 1);
+}
+let rot = 0;
+function rotát(){
+    if(shouldRotate){
+        document.body.style.transform = "rotate(" + rot + "deg)";
+        rot += 5;
+    }
 }
 function animateBackground(){
     if(Math.floor(Math.random() * 4) <= 1) return;
@@ -196,9 +204,14 @@ class NumberDiv{
 }
 let number = 0;
 let prevNum = 0;
+let shouldRotate = false;
 //zavolá se při změně vstupu na hlavním divu
 async function onInput(){
     number = document.getElementById("input").value;
+
+    if(number == "rotate") shouldRotate = true;
+    else shouldRotate = false;
+
     if(number == "") number = 0;
 
     getMainDiv().getElement().querySelector("#length").innerHTML = "Délka " + 
