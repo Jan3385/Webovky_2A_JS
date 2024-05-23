@@ -36,38 +36,32 @@ function rotát(){
         rot += 5;
     }
 }
-function animateBackground(){
-    if(Math.floor(Math.random() * 4) <= 1) return;
-
-    let r = Math.floor(Math.random() * 3);
-
-    let element;
-    let randomIndex;
-    let stringArray;
-    switch(r){
-        case 1:
-            element = document.getElementById("binaryBG");
-            randomIndex = Math.floor(Math.random() * element.innerHTML.length);
-            stringArray = element.innerHTML.split("");
-            stringArray[randomIndex] = Math.floor(Math.random() * 2).toString(2);
-            element.innerHTML = stringArray.join("");
-            break;
-        case 2:
-            element = document.getElementById("hexadecimalBG");
-            randomIndex = Math.floor(Math.random() * element.innerHTML.length);
-            stringArray = element.innerHTML.split("");
-            stringArray[randomIndex] = Math.floor(Math.floor(Math.random() * 16)).toString(16).toUpperCase();
-            element.innerHTML = stringArray.join("");
-            break;
-        case 3:
-            element = document.getElementById("decimalBG");
-            randomIndex = Math.floor(Math.random() * element.innerHTML.length);
-            stringArray = element.innerHTML.split("");
-            stringArray[randomIndex] = Math.floor(Math.floor(Math.random() * 10).toString(10));
-            element.innerHTML = stringArray.join("");
-            break;
+function animateBackground(){  
+    let elements = [];
+    elements.push(document.getElementById("binaryBG"));  
+    elements.push(document.getElementById("hexadecimalBG"));
+    elements.push(document.getElementById("decimalBG"));
+    elements.push(document.getElementById("binaryBG2"));
+    elements.push(document.getElementById("hexadecimalBG2"));
+    elements.push(document.getElementById("decimalBG2"));
     
+    let randomElement = elements[Math.floor(Math.random() * elements.length)];
+    let randomIndex = Math.floor(Math.random() * randomElement.innerHTML.length);
+    let stringArray = randomElement.innerHTML.split("");
+
+    switch(randomElement.id.split("")[0]){
+        case "b":   //binary
+            stringArray[randomIndex] = Math.floor(Math.random() * 2).toString(2);
+            break;
+        case "h":   //hexadecimal
+            stringArray[randomIndex] = Math.floor(Math.floor(Math.random() * 16)).toString(16).toUpperCase();
+            break;
+        case "d":   //decimal
+            stringArray[randomIndex] = Math.floor(Math.floor(Math.random() * 10)).toString(10);
+            break;
     }
+
+    randomElement.innerHTML = stringArray.join("");
 }
 function elementClickHandler(id) {
     let value = 0;

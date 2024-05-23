@@ -183,7 +183,8 @@ h1:hover{
                 rgba(255,255,255) 0%, rgba(255,255,255) 50%, rgb(221, 221, 221) 100%);
             margin: auto;
             width: 25svw;
-            min-height: 42dvh;
+            /*min-height: 42dvh;*/
+            min-height: calc(90vh - 280px);
             margin-bottom: 0px;
             overflow: hidden;
             border-radius: 10px;
@@ -225,7 +226,7 @@ h1:hover{
                 color: rgba(141, 141, 141, 0.112);
                 rotate: -1deg;
                 
-                font-size:130px;
+                font-size: 25dvh;
                 white-space: nowrap;
 
                 user-select: none;
@@ -243,7 +244,7 @@ h1:hover{
         div{
             background-color: #e6e4e4;
             width: 26svw;
-            min-height: 43svh;
+            min-height: calc(91vh - 280px);
             background-image: radial-gradient(circle, 
                 rgba(255,255,255,1) 0%, rgb(241, 241, 241) 50%, rgb(189, 189, 189) 100%);
             .textDecoration{
@@ -325,18 +326,36 @@ h1:hover{
         top: 0px;
         left: -5%;
         rotate: 15deg;
-        color: rgba(0, 0, 0, 0.03);
+        color: rgba(0, 0, 0, 0.02);
     }
     #hexadecimalBG{
         top: 50px;
         left: 56%;
         rotate: -50deg;
-        color: rgba(0, 0, 0, 0.04);
+        color: rgba(0, 0, 0, 0.02);
     }
     #decimalBG{
         top: 300px;
         left: 8%;
         rotate: -23deg;
-        color: rgba(0, 0, 0, 0.03);
+        color: rgba(0, 0, 0, 0.02);
+    }
+    #binaryBG2{
+        top: 500px;
+        right: 20%;
+        rotate: 8deg;
+        color: rgba(0, 0, 0, 0.02);
+    }
+    #hexadecimalBG2{
+        top: 700px;
+        left: 10%;
+        rotate: 20deg;
+        color: rgba(0, 0, 0, 0.02);
+    }
+    #decimalBG2{
+        top: 600px;
+        right: -6%;
+        rotate: -23deg;
+        color: rgba(0, 0, 0, 0.02);
     }
 }
