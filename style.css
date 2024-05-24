@@ -156,6 +156,7 @@ h1:hover{
     }
 }
 .grid{
+    user-select: none;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
@@ -195,6 +196,8 @@ h1:hover{
                 background-color 0.4s,
                 background-image 0.4s;
             h3{
+                font-family:Andale Mono, monospace;
+                font-size: 1.5rem;
                 text-align: center;
                 border-radius: 15px;
             }
@@ -256,9 +259,11 @@ h1:hover{
     }
 }
 .copyButton{
-    height: 25px;
-    width: 8%;
-    max-width: 30px;
+    min-height: 25px;
+    height: 3vh;
+    min-width: calc(3vh);
+    width: 3vh;
+    max-width: 1vw;
     margin: 0px 5px;
     margin-left: 25%;
     padding-left: 6px;
